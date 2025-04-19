@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Predict Social Media Impact</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      animation: fadeInDown 1s ease;
+    }
+    form {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      backdrop-filter: blur(10px);
+      animation: fadeInUp 1s ease;
+    }
+    select, button {
+      font-size: 1rem;
+      padding: 10px 15px;
+      margin-top: 10px;
+      width: 100%;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+    }
+    select {
+      margin-bottom: 20px;
+    }
+    button {
+      background: #ffffff;
+      color: #2575fc;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background: #e0e0e0;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <h1>🔮 Predict Social Media Impact</h1>
+  <form action="/form" method="post">
+    <label for="target">Choose what you want to predict:</label>
+    <select name="target" id="target">
+      <option value="addiction">Addiction Level</option>
+      <option value="satisfaction">Satisfaction</option>
+      <option value="productivity">Productivity Loss</option>
+    </select>
+    <button type="submit">Continue</button>
+  </form>
+</body>
+</html>
